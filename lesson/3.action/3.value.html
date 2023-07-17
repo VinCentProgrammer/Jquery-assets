@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Nhóm phương thức về giá trị</title>
+</head>
+<body>
+    <h1>Form Login </h1>
+    <form id="form_login" action="" method="post">
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br><br>
+        <input type="submit" value="Login Now" name="btn_login">
+        <div id="result">
+            <!-- -->
+        </div>
+    </form>
+    <script>
+        $(document).ready(function(){
+            // $('#username').val('Username');
+            $('#form_login').submit(function(){
+                let username = $('#username').val();
+                let password = $('#password').val();
+                // $('#id_username').text(username);
+                // $('#id_password').text(password);
+                // alert($('#id_username').text() + '-' + $('#id_password').text());
+
+                let string_html = "<p>Username: <strong id='id_username'>"+ username +"</strong></p><p>Password: <strong id='id_password'>"+ password +"</strong></p>";
+                $("#result").html(string_html);
+                alert($("#result").html());
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

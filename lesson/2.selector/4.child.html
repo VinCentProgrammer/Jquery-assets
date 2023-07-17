@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Nhóm selector lọc theo phần tử cha </title>
+</head>
+<body>
+    <h1>Nhóm selector lọc theo phần tử cha</h1>
+    <ul class="list-post">
+        <li>Bài viết 1</li>
+        <li>Bài viết 2</li>
+        <li>Bài viết 3</li>
+        <li>Bài viết 4</li>
+        <li>Bài viết 5</li>
+        <li>Bài viết 6</li>
+        <li>Bài viết 7</li>
+        <li>Bài viết 8</li>
+        <li>Bài viết 9</li>
+        <li>Bài viết 10</li>
+    </ul>
+    <ul class="list-post">
+        <li>Bài viết 1</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            //1. Chọn bài viết đầu tiên và cho nó màu đỏ
+            // $('.list-post :first-child').css('color', 'red');
+            //2. Chọn bài viết cuối cùng và cho nó màu đỏ
+            // $('.list-post :last-child').css('color', 'red');
+            //3. nth-child(even, odd, index, equation)
+            // $('.list-post :nth-child(4)').css('color', 'red');
+            // $('.list-post :nth-child(even)').css('color', 'red');
+            // $('.list-post :nth-child(odd)').css('color', 'red');
+            // $('.list-post :nth-child(3n)').css('color', 'red');
+            //4. Chọn phần tử con mà pt cha chỉ có 1
+            $(".list-post :only-child").css('color', 'red');
+        })
+    </script>
+</body>
+</html>

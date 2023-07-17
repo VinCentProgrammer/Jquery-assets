@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Nhóm selector lọc theo loại</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Heading 1</h2>
+        <a href="">Link 1</a>
+        <p>Văn bản 1</p>
+        <h2>Heading 2</h2>
+        <a href="">Link 2</a>
+        <p>Văn bản 2</p>
+        <h2>Heading 3</h2>
+        <a href="">Link 3</a>
+        <p>Văn bản 3</p>
+        <h2>Heading 4</h2>
+        <a href="">Link 4</a>
+        <p>Văn bản 4</p>
+    </div>
+    <div class="box">
+        <h2>Heading 1</h2>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //1. first-of-type
+            $('.box p:first-of-type').css('color', 'red');
+            $('.box h2:first-of-type').css('color', 'green');
+            //2. last-of-type
+            $('.box p:last-of-type').css('background', 'tomato');
+            $('.box a:last-of-type').css('background', 'green');
+            //3. Only-of-type
+            $('.box h2:only-of-type').css('color', 'pink');
+        })
+    </script>
+</body>
+</html>

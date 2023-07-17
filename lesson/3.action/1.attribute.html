@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "js/jquery.js"></script>
+    <title>Nhóm phương thức xử lí thuộc tính</title>
+</head>
+<body>
+    <img data-src="tech.html" src="https://i0.wp.com/businessday.ng/wp-content/uploads/2021/09/Tech.jpg?fit=713%2C402&ssl=1" alt="" title="">
+    <a href="#">Lấy link ảnh</a>
+    <script>
+        $(document).ready(function(){
+            $('a').click(function(){
+                // let link_img = $('img').attr('src');
+                // $('img').attr('title', 'Information Technology');
+                $('img').removeAttr('data-src');
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

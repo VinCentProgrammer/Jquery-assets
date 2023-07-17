@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Hiệu ứng hoạt cảnh animate</title>
+</head>
+<body>
+    <style>
+        #wrapper{
+            margin: 0 auto;
+            width: 960px;
+            position: relative;
+        }
+        .box{
+            background-color: tomato;
+            color: #fff;
+            width: 100px;
+            padding: 40px;
+        }
+        #box-1{
+            position: absolute;
+            top: 100px;
+            left: 0px;
+        }
+        #box-2{
+            position: absolute;
+            top: 100px;
+            right: 0px;
+        }
+    </style>
+    <div id="wrapper">
+        <h1>Hiệu ứng hoạt cảnh animate</h1>
+        <a href="#">Animate</a>
+        <div class="box" id="box-1">
+            Animate 1
+        </div>
+        <div class="box" id="box-2">
+            Animate 2
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('a').click(function(){
+                $('#box-1').animate(
+                    {
+                        padding: '20px',
+                        background: 'green',
+                        left: '400'
+                    },
+                    500,
+                );
+                $('#box-2').animate(
+                    {
+                        padding: '20px',
+                        background: 'green',
+                        right: '400'
+                    },
+                    500,
+                    function(){
+                        alert('Mix 1 & 2');
+                    }
+                );
+            })
+        })
+    </script>
+</body>
+</html>

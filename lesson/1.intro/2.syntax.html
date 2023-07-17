@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Cú pháp viết code jquery</title>
+</head>
+<body>
+    <p>Dữ liệu ban đầu</p>
+    <p>Họ: <span class="first-name"></span></p>
+    <p>Tên: <span class="last-name"></span></p>
+    <script>
+        $(document).ready(function(){
+            // $(selector).action();
+            // $('p').text('Hà Văn Dũng');
+            $('.first-name').text('Hà Văn');
+            $('.last-name').text('Dũng');
+        });
+    </script>
+</body>
+</html>

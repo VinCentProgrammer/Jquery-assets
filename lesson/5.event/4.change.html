@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Sự kiện change trong jquery</title>
+</head>
+<body>
+    <style>
+        a{
+            display: inline-block;
+            background-color: tomato;
+            color: #fff;
+            padding: 5px 20px;
+            text-decoration: none;
+        }
+    </style>
+    <h1>Sự kiện change trong jquery</h1>
+    <form action="" method="post" id="form_login">
+        <input type="text" name="form_input_text" id="form_input_text"><br><br>
+        <select name="form_select" id="form_select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br><br>
+        <textarea name="form_textarea" id="form_textarea" cols="30" rows="10"></textarea><br>
+    </form><br>
+    <a href="#" id="other">Other</a>
+    <script>
+        $(document).ready(function(){
+            $('#form_input_text').change(function(){
+                alert($(this).val());
+            })
+            $('#form_select').change(function(){
+                alert($(this).val());
+            })
+            $('#form_textarea').change(function(){
+                alert($(this).val());
+            })
+            $('#other').click(function(){
+                $('#form_input_text').change();
+                return false;
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Nhóm phương thức tìm kiếm và lọc </title>
+</head>
+<body>
+    <!-- <p>Đoạn văn 0</p>
+    <p>Đoạn văn 1</p>
+    <p>Đoạn văn 2</p>
+    <p class="highlight">Đoạn văn 3</p>
+    <p>Đoạn văn 4</p>
+    <p>Đoạn văn 5</p>
+    <p>Đoạn văn 6</p>
+    <p>Đoạn văn 7</p>
+    <p class="highlight">Đoạn văn 8</p>
+    <p>Đoạn văn 9</p>
+    <p>Đoạn văn 10</p> -->
+    <!-- <style>
+        ul.sub-menu{display: none;}
+    </style> -->
+    <ul id="main-menu">
+        <li><a href="">Menu 1</a></li>
+        <li><a href="">Menu 2</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 2.1</a></li>
+                <li><a href="">Menu 2.2</a></li>
+                <li><a href="">Menu 2.3</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 3</a></li>
+        <li><a href="">Menu 4</a></li>
+        <li><a href="">Menu 5</a></li>
+        <li><a href="">Menu 6</a>
+            <ul class="sub-menu">
+                <li><a href="">Menu 6.1</a></li>
+                <li><a href="">Menu 6.2</a></li>
+                <li><a href="">Menu 6.3</a></li>
+            </ul>
+        </li>
+        <li><a href="">Menu 7</a></li>
+        <li><a href="">Menu 8</a></li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            //1. eq
+            // $('p').eq(1).css('color', 'red');
+            //2. not
+            // $('p').not($('p').eq(1)).css('color', 'red');
+            // $('p').not('.highlight').css('color', 'red');
+            //3. filter
+            // $('p').filter('.highlight').css('color', 'green');
+            //4. next
+            // $('p').filter('.highlight').next().css('color', 'green');
+            //5. nextAll
+            // $('p').filter('.highlight').nextAll().css('color', 'green');
+            //6. prev
+            // $('p').filter('.highlight').prev().css('color', 'green');
+            //7. prevAll
+            // $('p').filter('.highlight').prevAll().css('color', 'green');
+            //8. is
+            // $('p').click(function(){
+            //     if($(this).is('.highlight'))
+            //         alert('OK');
+            // })
+            //9. children, find
+
+            // $('#main-menu li').click(function(){
+            //     // $(this).children('ul.sub-menu').show();
+            //     // $(this).find('ul.sub-menu').find('a').css('color', 'tomato');
+            //     // $(this).children('ul.sub-menu').find('a').css('color', 'tomato');
+            //     return false;
+            // })
+            //10. parent, parents
+            $('#main-menu a').click(function(){
+                $(this).parents('li').css('border', '1px solid tomato');
+                // $(this).parent('li').css('border', '1px solid tomato');
+                return false;
+            })
+
+        })
+    </script>
+</body>
+</html>

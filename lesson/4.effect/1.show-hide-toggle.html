@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Hiệu ứng show - hide - toggle</title>
+</head>
+<body>
+    <style>
+        #box{
+            width: 200px;
+            padding: 20px 10px;
+            color: #fff;
+            background-color: tomato;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+    <a href="#" id="effect-show">Show</a>
+    <a href="#" id="effect-hide">Hide</a>
+    <a href="#" id="effect-toggle">Toggle</a>
+    <div id="box">
+        BOX
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#effect-show').click(function(){
+                $('#box').show(500, function(){
+                    alert('show done.....');
+                });
+            })
+            $('#effect-hide').click(function(){
+                $('#box').hide(500, function(){
+                    alert('hide done.....');
+                });
+            })
+            $('#effect-toggle').click(function(){
+                $('#box').toggle(500, function(){
+                    alert('toggle done.....');
+                });
+            })
+        })
+    </script>
+</body>
+</html>

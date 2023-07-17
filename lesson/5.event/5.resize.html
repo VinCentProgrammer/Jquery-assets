@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Sự kiện resize trong jquery
+    </title>
+</head>
+<body>
+    <h1>Sự kiện resize trong jquery</h1>
+    <p>Độ rộng trình duyệt hiện tại: <strong id="width_window"></strong></p>
+    <script>
+        $(document).ready(function(){
+            let width_window = $(window).width();
+            $('#width_window').text(width_window + ' px');
+            $(window).resize(function(){
+                width_window = $(window).width();
+                $('#width_window').text(width_window + ' px');
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Sự kiện click</title>
+</head>
+<body>
+    <style>
+        #target, #other{
+            display: inline-block;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            margin: 20px;
+            text-decoration: none;
+        }
+    </style>
+    <a href="#" id = "target">#target</a>
+    <a href="#" id = "other">#other</a>
+    <script>
+        $(document).ready(function(){
+            $('#target').click(function(){
+                alert('Bạn vừa click vào #target');
+            })
+            $('#other').click(function(){
+                alert('Clicked #other');
+                $('#target').click();
+            })
+        });
+    </script>
+</body>
+</html>

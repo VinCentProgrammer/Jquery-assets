@@ -1,0 +1,10 @@
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.active{
+    border: 2px solid #FB9393 !important;
+    opacity: 1 !important;
+    cursor: pointer;
+}

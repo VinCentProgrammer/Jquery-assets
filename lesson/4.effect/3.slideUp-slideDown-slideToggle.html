@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Hiệu ứng slideUp - slideDown - slideToggle</title>
+</head>
+<body>
+    <style>
+        #box{
+            width: 200px;
+            padding: 20px 10px;
+            color: #fff;
+            background-color: tomato;
+            margin: 20px;
+            display: none;
+        }
+    </style>
+    <h1>Hiệu ứng slideUp - slideDown - slideToggle</h1>
+    <a href="#" id="effect-slideUp">slideUp</a>
+    <a href="#" id="effect-slideDown">slideDown</a>
+    <a href="#" id="effect-slideToggle">slideToggle</a>
+    <div id="box">
+        BOX
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#effect-slideUp').click(function(){
+                $('#box').slideUp(500);
+            })
+            $('#effect-slideDown').click(function(){
+                $('#box').slideDown(500);
+            })
+            $('#effect-slideToggle').click(function(){
+                $('#box').slideToggle(500);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.js"></script>
+    <title>Nhóm selector về form</title>
+</head>
+<body>
+    <style>
+        form *{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+    <form action="">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="" disabled = "disabled">
+        <input type="checkbox" name="hobby" id="" value="Read_book">
+        <input type="checkbox" name="hobby" id="" value="Run" checked = "checked">
+        <input type="checkbox" name="hobby" id="" value="Game" checked = "checked">
+        <input type="radio" name="" id="">
+        <input type="file" name="" id="">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>Nút bấm</button>
+        <input type="submit" value="Login">
+        <select name="" id="">
+            <option value="">Chọn</option>
+            <option value="">PHP</option>
+            <option selected = "selected" value="">REACTJS</option>
+        </select>
+    </form>
+    <script>
+        $(document).ready(function(){
+            //1. Lấy số lượng phần tử form
+            let numberForms = $('form :input').length;
+            //2. 
+            $('form :text').css('color', 'red');
+            //3. 
+            // let option_select_selected = $('form :selected');
+            // option_select_selected.each(function(){
+            //     alert($(this).text());
+            // })
+
+            // let input_checkbox_checked = $('form :checkbox:checked');
+            // input_checkbox_checked.each(function(){
+            //     console.log($(this).val());
+            // })
+
+
+            //4. 
+            $('form :disabled').css('border', '1px solid red');
+            $('form :enabled').css('border', '1px solid green');
+        })
+    </script>
+</body>
+</html>
